@@ -1,9 +1,12 @@
 {
   "RootLayout": {
-    "home_link": "Home",
-    "about_link": "About",
-    "guestbook_link": "Guestbook",
-    "portfolio_link": "Portfolio",
+    "home_link": "หน้าแรก",
+    "about_link": "My Feed",
+    "guestbook_link": "Pantip Pick",
+    "portfolio_link": "Pantip Hitz",
+    "explore": "Explore",
+
+
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
   },
