@@ -4,11 +4,9 @@ import { useTranslations } from 'next-intl';
 
 import { BaseTemplate } from '@/templates/BaseTemplate';
 import { IoMdHome } from 'react-icons/io';
-import { MdFeed } from 'react-icons/md';
+import { MdFeed, MdExplore } from 'react-icons/md';
 import { AiFillLike } from 'react-icons/ai';
-import { GiStarFormation } from 'react-icons/gi';
-import { MdExplore } from 'react-icons/md';
-import { GiSpellBook } from 'react-icons/gi';
+import { GiStarFormation, GiSpellBook } from 'react-icons/gi';
 const menuItems = {
   book: 'ห้องสมุด',
   Blue_Plan_Net: 'บลูแพลนเน็ต',
