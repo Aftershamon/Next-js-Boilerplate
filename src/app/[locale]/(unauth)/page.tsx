@@ -17,8 +17,8 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 export default function Index() {
   return (
     <>
-      <h5 className='text-3xl font-bold text-zinc-50 mt-5'>Highlight</h5>
-      <div className='grid grid-cols-4 gap-1'>
+      <h5 className="text-3xl font-bold text-zinc-50 mt-5">Highlight</h5>
+      <div className="grid grid-cols-4 gap-1">
         <CardItem />
         <CardItem />
         <CardItem />
