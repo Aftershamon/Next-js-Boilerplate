@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-
-
 import { BaseTemplate } from '@/templates/BaseTemplate';
 import { IoMdHome } from 'react-icons/io';
 import { MdFeed, MdExplore } from 'react-icons/md';
