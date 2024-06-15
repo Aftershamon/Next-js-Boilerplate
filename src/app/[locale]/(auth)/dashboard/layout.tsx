@@ -30,17 +30,6 @@ export default function DashboardLayout(props: { children: React.ReactNode }) {
           </li>
         </>
       }
-      rightNav={
-        <>
-          <li>
-            <LogOutButton />
-          </li>
-
-          <li>
-            <LocaleSwitcher />
-          </li>
-        </>
-      }
     >
       {props.children}
     </BaseTemplate>
