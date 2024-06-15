@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
 export default function DashboardLayout(props: { children: React.ReactNode }) {
