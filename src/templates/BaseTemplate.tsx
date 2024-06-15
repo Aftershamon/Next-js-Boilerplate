@@ -1,10 +1,8 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { AppConfig } from '@/utils/AppConfig';
-import { FaUserCircle } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa';
+import { FaUserCircle, FaBars, FaFacebookSquare } from "react-icons/fa";
 import { FaAnglesRight } from 'react-icons/fa6';
-import { FaFacebookSquare } from 'react-icons/fa';
 import { TiSocialInstagram } from 'react-icons/ti';
 import { Divider } from '@mui/material';
 const BaseTemplate = (props: {
@@ -12,7 +10,7 @@ const BaseTemplate = (props: {
   children: React.ReactNode;
   menuNav?: React.ReactNode;
 }) => {
-  const t = useTranslations("BaseTemplate");
+  const t = useTranslations('BaseTemplate');
 
   return (
     <div className="w-full text-gray-700 antialiased">
