@@ -3,6 +3,28 @@ import { useTranslations } from 'next-intl';
 
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
+import { IoMdHome } from "react-icons/io";
+import { MdFeed } from "react-icons/md";
+import { AiFillLike } from "react-icons/ai";
+import { GiStarFormation } from "react-icons/gi";
+import { MdExplore } from "react-icons/md";
+import { GiSpellBook } from "react-icons/gi";
+
+export const data = {
+  menuItems: {
+    book: "ห้องสมุด",
+    Blue_Plan_Net: "บลูแพลนเน็ต",
+    Chaika: "ชายคา",
+    Chaloem_Thai: "เฉลิมไทย",
+    Griang_Zone: "กรีนโซน",
+    Camera: "กล้อง",
+    Gadget: "แก็ดเจ็ด",
+    Far_from_Home: "ไกลบ้าน",
+    Chaloem_Krung: "เฉลิมกรุง",
+    Dio_Siam: "ดิโอลด์สยาม",
+    Writer_Road: "ถนนนักเขียน",
+  },
+};
 
 export default function Layout(props: { children: React.ReactNode }) {
   const t = useTranslations('RootLayout');
@@ -14,68 +36,63 @@ export default function Layout(props: { children: React.ReactNode }) {
           <li>
             <Link
               href="/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              {t('home_link')}
+              <IoMdHome size={30} />
+              {t("home_link")}
             </Link>
           </li>
           <li>
             <Link
               href="/about/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              {t('about_link')}
+              <MdFeed size={30} />
+              {t("about_link")}
             </Link>
           </li>
           <li>
             <Link
               href="/guestbook/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              {t('guestbook_link')}
+              <AiFillLike size={30} />
+              {t("guestbook_link")}
             </Link>
           </li>
           <li>
             <Link
               href="/portfolio/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              {t('portfolio_link')}
+              <GiStarFormation size={30} />
+              {t("portfolio_link")}
             </Link>
           </li>
           <li>
-            <a
-              className="border-none text-gray-700 hover:text-gray-900"
-              href="https://github.com/ixartz/Next-js-Boilerplate"
+            <Link
+              href="/portfolio/"
+              className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              GitHub
-            </a>
+              <MdExplore size={30} />
+              {t("explore")}
+            </Link>
           </li>
         </>
       }
-      rightNav={
+      menuNav={
         <>
-          <li>
-            <Link
-              href="/sign-in/"
-              className="border-none text-gray-700 hover:text-gray-900"
-            >
-              {t('sign_in_link')}
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/sign-up/"
-              className="border-none text-gray-700 hover:text-gray-900"
-            >
-              {t('sign_up_link')}
-            </Link>
-          </li>
-
-          <li>
-            <LocaleSwitcher />
-          </li>
+          {Object.entries(data.menuItems).map(([key, value]) => (
+            <li key={key}>
+              <Link
+                href="/"
+                className="flex flex-col items-center gap-2 border-none text-gray-300 hover:text-white"
+              >
+                <GiSpellBook size={30} />
+                {value}
+              </Link>
+            </li>
+          ))}
         </>
       }
     >
