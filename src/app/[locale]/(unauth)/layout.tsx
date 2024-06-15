@@ -9,25 +9,22 @@ import { AiFillLike } from "react-icons/ai";
 import { GiStarFormation } from "react-icons/gi";
 import { MdExplore } from "react-icons/md";
 import { GiSpellBook } from "react-icons/gi";
-
-export const data = {
-  menuItems: {
-    book: "ห้องสมุด",
-    Blue_Plan_Net: "บลูแพลนเน็ต",
-    Chaika: "ชายคา",
-    Chaloem_Thai: "เฉลิมไทย",
-    Griang_Zone: "กรีนโซน",
-    Camera: "กล้อง",
-    Gadget: "แก็ดเจ็ด",
-    Far_from_Home: "ไกลบ้าน",
-    Chaloem_Krung: "เฉลิมกรุง",
-    Dio_Siam: "ดิโอลด์สยาม",
-    Writer_Road: "ถนนนักเขียน",
-  },
+const menuItems = {
+  book: "ห้องสมุด",
+  Blue_Plan_Net: "บลูแพลนเน็ต",
+  Chaika: "ชายคา",
+  Chaloem_Thai: "เฉลิมไทย",
+  Griang_Zone: "กรีนโซน",
+  Camera: "กล้อง",
+  Gadget: "แก็ดเจ็ด",
+  Far_from_Home: "ไกลบ้าน",
+  Chaloem_Krung: "เฉลิมกรุง",
+  Dio_Siam: "ดิโอลด์สยาม",
+  Writer_Road: "ถนนนักเขียน",
 };
 
 export default function Layout(props: { children: React.ReactNode }) {
-  const t = useTranslations('RootLayout');
+  const t = useTranslations("RootLayout");
 
   return (
     <BaseTemplate
@@ -82,7 +79,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       }
       menuNav={
         <>
-          {Object.entries(data.menuItems).map(([key, value]) => (
+          {Object.entries(menuItems).map(([key, value]) => (
             <li key={key}>
               <Link
                 href="/"
