@@ -12,57 +12,57 @@ const BaseTemplate = (props: {
   children: React.ReactNode;
   menuNav?: React.ReactNode;
 }) => {
-  const t = useTranslations('BaseTemplate');
+  const t = useTranslations("BaseTemplate");
 
   return (
-    <div className='w-full text-gray-700 antialiased'>
-      <div className='mx-auto'>
-        <header className='border-b border-gray-300 navbar-background pr-20 pl-20'>
-          <div className='pb-8 pt-8 flex justify-between items-center'>
-            <h1 className='text-3xl font-bold text-gray-900'>
+    <div className="w-full text-gray-700 antialiased">
+      <div className="mx-auto">
+        <header className="border-b border-gray-300 navbar-background pr-20 pl-20">
+          <div className="pb-8 pt-8 flex justify-between items-center">
+            <h1 className="text-3xl font-bold text-gray-900">
               <Image
-                src='/assets/images/logo-mobile-pantip-white.png'
-                alt='Sentry'
+                src="/assets/images/logo-mobile-pantip-white.png"
+                alt="Sentry"
                 width={130}
                 height={110}
               />
             </h1>
-            <div className='bg-white border border-gray-300 rounded-full p-5 pl-10 pr-10'>
+            <div className="bg-white border border-gray-300 rounded-full p-5 pl-10 pr-10">
               <nav>
-                <ul className='flex flex-wrap gap-x-10 text-xl'>
+                <ul className="flex flex-wrap gap-x-10 text-xl">
                   {props.leftNav}
                 </ul>
               </nav>
             </div>
-            <div className='bg-white border border-gray-300 rounded-full  items-center p-2 pl-5 pr-5 flex flex-row gap-5'>
+            <div className="bg-white border border-gray-300 rounded-full  items-center p-2 pl-5 pr-5 flex flex-row gap-5">
               <FaBars size={30} />
               <FaUserCircle size={40} />
             </div>
           </div>
         </header>
-        <header className='border-b border-gray-300 navbar-background p-5 pr-20 pl-20 flex justify-start items-center'>
+        <header className="border-b border-gray-300 navbar-background p-5 pr-20 pl-20 flex justify-start items-center">
           <nav>
-            <ul className='flex flex-wrap gap-20 text-xl'>{props.menuNav}</ul>
+            <ul className="flex flex-wrap gap-20 text-xl">{props.menuNav}</ul>
           </nav>
 
           <button
-            type='button'
-            className='ml-auto bg-white hover:bg-gray-600 text-gray-700 font-bold py-2 px-4 rounded-full'
+            type="button"
+            className="ml-auto bg-white hover:bg-gray-600 text-gray-700 font-bold py-2 px-4 rounded-full"
           >
-            <span aria-hidden='true'>
+            <span aria-hidden="true">
               <FaAnglesRight />
             </span>
           </button>
         </header>
 
-        <main className='pr-20 pl-20'>{props.children}</main>
+        <main className="pr-20 pl-20">{props.children}</main>
 
         <footer
-          className='border-t border-gray-300 py-8 text-sm text-white flex flex-col gap-5 pr-20 pl-20'
-          style={{ fontSize: '16px' }}
+          className="border-t border-gray-300 py-8 text-sm text-white flex flex-col gap-5 pr-20 pl-20"
+          style={{ fontSize: "16px" }}
         >
-          <div className='flex flex-row gap-10 justify-between'>
-            <div className='flex flex-col text-start gap-2'>
+          <div className="flex flex-row gap-10 justify-between">
+            <div className="flex flex-col text-start gap-2">
               <h5>กฎ กติกาและมารยาท</h5>
               <h5>คำแนะนำการโพสต์</h5>
               <h5>นโยบายเกี่ยวกับข้อมูลส่วนบุคคล</h5>
@@ -73,8 +73,8 @@ const BaseTemplate = (props: {
               <h5>Download app Pantip</h5>
               <h5>Pantip Certified Developer</h5>
             </div>
-            <div className='flex flex-col text-start'>
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
+            <div className="flex flex-col text-start">
+              <h3 style={{ fontSize: "20px", marginBottom: "15px" }}>
                 <b>แท็กฮิต</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -87,8 +87,8 @@ const BaseTemplate = (props: {
               <h5>ไกลบ้าน</h5>
               <h5>ถนนนักเขียน</h5>
             </div>
-            <div className='flex flex-col text-start gap-2'>
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
+            <div className="flex flex-col text-start gap-2">
+              <h3 style={{ fontSize: "20px", marginBottom: "15px" }}>
                 <b>หมวดหมู่</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -101,27 +101,27 @@ const BaseTemplate = (props: {
               <h5>ไกลบ้าน</h5>
             </div>
           </div>
-          <Divider color='white' />
-          <div className='flex flex-row justify-between items-center'>
-            <a href='/'>
+          <Divider color="white" />
+          <div className="flex flex-row justify-between items-center">
+            <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
-              {` ${t('made_with')} `}
+              {` ${t("made_with")} `}
             </a>
             <div>
-              <a href='/'>เงื่อนไข </a>
-              <a href='/'>แผนผังเว็บไซต์ </a>
-              <a href='/'>ความเป็นส่วนตัว </a>
+              <a href="/">เงื่อนไข </a>
+              <a href="/">แผนผังเว็บไซต์ </a>
+              <a href="/">ความเป็นส่วนตัว </a>
             </div>
-            <div className='flex gap-2 items-center'>
-              <a href='/'>
-                <span aria-hidden='true'>
-                  {' '}
-                  <FaFacebookSquare className='text-2xl' />
+            <div className="flex gap-2 items-center">
+              <a href="/">
+                <span aria-hidden="true">
+                  {" "}
+                  <FaFacebookSquare className="text-2xl" />
                 </span>
               </a>
-              <a href='/'>
-                <span aria-hidden='true'>
-                  <TiSocialInstagram className='text-2xl' />
+              <a href="/">
+                <span aria-hidden="true">
+                  <TiSocialInstagram className="text-2xl" />
                 </span>
               </a>
             </div>
