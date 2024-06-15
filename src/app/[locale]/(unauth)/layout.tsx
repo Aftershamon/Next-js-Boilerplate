@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import LocaleSwitcher from '@/components/LocaleSwitcher';
+
 import { BaseTemplate } from '@/templates/BaseTemplate';
 import { IoMdHome } from "react-icons/io";
 import { MdFeed } from "react-icons/md";
