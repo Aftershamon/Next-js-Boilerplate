@@ -49,8 +49,9 @@ const BaseTemplate = (props: {
             type="button"
             className="ml-auto bg-white hover:bg-gray-600 text-gray-700 font-bold py-2 px-4 rounded-full"
           >
-            <span aria-hidden="true">FaAnglesRight</span>
-            <FaAnglesRight />
+             <span aria-hidden="true">
+              <FaAnglesRight />
+            </span>
           </button>
         </header>
 
@@ -113,12 +114,15 @@ const BaseTemplate = (props: {
             </div>
             <div className="flex gap-2 items-center">
               <a href="/">
-                <span aria-hidden="true">Facebook</span>
-                <FaFacebookSquare className="text-2xl" />
+                <span aria-hidden="true">
+                  {" "}
+                  <FaFacebookSquare className="text-2xl" />
+                </span>
               </a>
               <a href="/">
-                <span aria-hidden="true">Instagram</span>
-                <TiSocialInstagram className="text-2xl" />
+                <span aria-hidden="true">
+                  <TiSocialInstagram className="text-2xl" />
+                </span>
               </a>
             </div>
           </div>
