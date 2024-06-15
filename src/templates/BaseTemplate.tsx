@@ -47,9 +47,9 @@ const BaseTemplate = (props: {
             type="button"
             className="ml-auto bg-white hover:bg-gray-600 text-gray-700 font-bold py-2 px-4 rounded-full"
           >
-            <span aria-hidden="true">
+            <label aria-hidden="true">
               <FaAnglesRight />
-            </span>
+            </label>
           </button>
         </header>
 
@@ -57,7 +57,7 @@ const BaseTemplate = (props: {
 
         <footer
           className="border-t border-gray-300 py-8 text-sm text-white flex flex-col gap-5 pr-20 pl-20"
-          style={{ fontSize: "16px" }}
+          style={{ fontSize: '16px' }}
         >
           <div className="flex flex-row gap-10 justify-between">
             <div className="flex flex-col text-start gap-2">
@@ -72,7 +72,7 @@ const BaseTemplate = (props: {
               <h5>Pantip Certified Developer</h5>
             </div>
             <div className="flex flex-col text-start">
-              <h3 style={{ fontSize: "20px", marginBottom: "15px" }}>
+              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
                 <b>แท็กฮิต</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -86,7 +86,7 @@ const BaseTemplate = (props: {
               <h5>ถนนนักเขียน</h5>
             </div>
             <div className="flex flex-col text-start gap-2">
-              <h3 style={{ fontSize: "20px", marginBottom: "15px" }}>
+              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
                 <b>หมวดหมู่</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -103,17 +103,16 @@ const BaseTemplate = (props: {
           <div className="flex flex-row justify-between items-center">
             <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
-              {` ${t("made_with")} `}
+              {` ${t('made_with')} `}
             </a>
             <div>
-              <a href="/">เงื่อนไข </a>
+              <a href="/">เงื่อนไข</a>
               <a href="/">แผนผังเว็บไซต์ </a>
               <a href="/">ความเป็นส่วนตัว </a>
             </div>
             <div className="flex gap-2 items-center">
               <a href="/">
                 <span aria-hidden="true">
-                  {" "}
                   <FaFacebookSquare className="text-2xl" />
                 </span>
               </a>
