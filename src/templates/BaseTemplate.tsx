@@ -5,6 +5,7 @@ import { FaUserCircle, FaBars, FaFacebookSquare } from 'react-icons/fa';
 import { FaAnglesRight } from 'react-icons/fa6';
 import { TiSocialInstagram } from 'react-icons/ti';
 import { Divider } from '@mui/material';
+
 const BaseTemplate = (props: {
   leftNav: React.ReactNode;
   children: React.ReactNode;
