@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { BaseTemplate } from '@/templates/BaseTemplate';
-import { IoMdHome } from 'react-icons/io';
-import { MdFeed, MdExplore } from 'react-icons/md';
 import { AiFillLike } from 'react-icons/ai';
-import { GiStarFormation, GiSpellBook } from 'react-icons/gi';
+import { GiSpellBook, GiStarFormation } from 'react-icons/gi';
+import { IoMdHome } from 'react-icons/io';
+import { MdExplore, MdFeed } from 'react-icons/md';
+
+import { BaseTemplate } from '@/templates/BaseTemplate';
 
 const menuItems = {
   book: 'ห้องสมุด',
