@@ -16,9 +16,9 @@ const menuItems = {
   Camera: 'กล้อง',
   Gadget: 'แก็ดเจ็ด',
   Far_from_Home: 'ไกลบ้าน',
-  Chaloem_Krung: 'เฉลิมกรุง',
-  Dio_Siam: 'ดิโอลด์สยาม',
-  Writer_Road: 'ถนนนักเขียน',
+  // Chaloem_Krung: 'เฉลิมกรุง',
+  // Dio_Siam: 'ดิโอลด์สยาม',
+  // Writer_Road: 'ถนนนักเขียน',
 };
 
 export default function Layout(props: { children: React.ReactNode }) {
@@ -81,7 +81,7 @@ export default function Layout(props: { children: React.ReactNode }) {
             <li key={key}>
               <Link
                 href="/"
-                className="flex flex-col items-center gap-2 border-none text-gray-300 hover:text-white"
+                className="flex flex-col items-center gap-2 border-none text-sm text-gray-300 hover:text-white"
               >
                 <GiSpellBook size={30} />
                 {value}

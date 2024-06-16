@@ -1,6 +1,5 @@
 import { Divider } from '@mui/material';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { FaBars, FaFacebookSquare, FaUserCircle } from 'react-icons/fa';
 import { FaAnglesRight } from 'react-icons/fa6';
 import { TiSocialInstagram } from 'react-icons/ti';
@@ -12,35 +11,33 @@ const BaseTemplate = (props: {
   children: React.ReactNode;
   menuNav?: React.ReactNode;
 }) => {
-  const t = useTranslations('BaseTemplate');
-
   return (
     <div className="w-full text-gray-700 antialiased">
       <div className="mx-auto">
-        <header className="navbar-background border-b border-gray-300 px-20">
-          <div className="flex items-center justify-between py-8">
+        <header className="navbar-background border-b border-black px-20">
+          <div className="flex items-center justify-between py-5">
             <h1 className="text-3xl font-bold text-gray-900">
               <Image
                 src="/assets/images/logo-mobile-pantip-white.png"
                 alt="Sentry"
-                width={130}
-                height={110}
+                width={90}
+                height={90}
               />
             </h1>
-            <div className="rounded-full border border-gray-300 bg-white p-5 px-10">
+            <div className="rounded-full border border-gray-300 bg-white p-2 px-10">
               <nav>
-                <ul className="flex flex-wrap gap-x-10 text-xl">
+                <ul className="flex flex-wrap gap-x-10 text-sm">
                   {props.leftNav}
                 </ul>
               </nav>
             </div>
-            <div className="flex flex-row items-center gap-5  rounded-full border border-gray-300 bg-white p-2 px-5">
-              <FaBars size={30} />
-              <FaUserCircle size={40} />
+            <div className="flex flex-row items-center gap-5  rounded-full border border-gray-300 bg-white p-2 px-3">
+              <FaBars size={20} />
+              <FaUserCircle size={30} />
             </div>
           </div>
         </header>
-        <header className="navbar-background flex items-center justify-start border-b border-gray-300 p-5 px-20">
+        <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-20">
           <nav>
             <ul className="flex flex-wrap gap-20 text-xl">{props.menuNav}</ul>
           </nav>
@@ -57,8 +54,8 @@ const BaseTemplate = (props: {
         <main className="px-20">{props.children}</main>
 
         <footer
-          className="flex flex-col gap-5 border-t border-gray-300 px-20 py-8 text-sm text-white"
-          style={{ fontSize: '16px' }}
+          className="flex flex-col gap-5 px-20 py-8 text-sm text-white"
+          style={{ fontSize: '14px', backgroundColor: '#353156' }}
         >
           <div className="flex flex-row justify-between gap-10">
             <div className="flex flex-col gap-2 text-start">
@@ -73,7 +70,7 @@ const BaseTemplate = (props: {
               <h5>Pantip Certified Developer</h5>
             </div>
             <div className="flex flex-col text-start">
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
+              <h3 style={{ fontSize: '16px', marginBottom: '15px' }}>
                 <b>แท็กฮิต</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -87,7 +84,7 @@ const BaseTemplate = (props: {
               <h5>ถนนนักเขียน</h5>
             </div>
             <div className="flex flex-col gap-2 text-start">
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
+              <h3 style={{ fontSize: '16px', marginBottom: '15px' }}>
                 <b>หมวดหมู่</b>
               </h3>
               <h5>ห้องสมุด</h5>
@@ -100,14 +97,13 @@ const BaseTemplate = (props: {
               <h5>ไกลบ้าน</h5>
             </div>
           </div>
-          <Divider color="white" />
+          <Divider color="black" />
           <div className="flex flex-row items-center justify-between">
             <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
-              {` ${t('made_with')} `}
             </a>
             <div>
-              <a href="/">เงื่อนไข</a>
+              <a href="/">เงื่อนไข </a>
               <a href="/">แผนผังเว็บไซต์ </a>
               <a href="/">ความเป็นส่วนตัว </a>
             </div>
