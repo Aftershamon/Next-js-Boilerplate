@@ -9,6 +9,9 @@ const BaseTemplate = (props: {
   leftNav: React.ReactNode;
   children: React.ReactNode;
   menuNav?: React.ReactNode;
+  footerNav?: React.ReactNode;
+  footerNavBlog?: React.ReactNode;
+  footerNavTag?: React.ReactNode;
 }) => {
   return (
     <div className="w-full text-gray-700 antialiased">
@@ -53,10 +56,13 @@ const BaseTemplate = (props: {
         <main className="px-20">{props.children}</main>
 
         <footer
-          className="flex flex-col gap-5 px-20 py-8 text-sm text-white"
+          className="flex flex-col gap-5 px-20 py-8 text-sm"
           style={{ fontSize: '14px', backgroundColor: '#353156' }}
         >
-          <div className="flex flex-row justify-between gap-10">
+          <div
+            className="flex flex-row justify-between gap-10"
+            style={{ color: 'rgba(233,229,246)' }}
+          >
             <div className="flex flex-col gap-2 text-start">
               <h5>กฎ กติกาและมารยาท</h5>
               <h5>คำแนะนำการโพสต์</h5>
@@ -68,36 +74,48 @@ const BaseTemplate = (props: {
               <h5>Download app Pantip</h5>
               <h5>Pantip Certified Developer</h5>
             </div>
-            <div className="flex flex-col text-start">
-              <h3 style={{ fontSize: '16px', marginBottom: '15px' }}>
-                <b>แท็กฮิต</b>
+            <div className="flex flex-col gap-2 text-start">
+              <h3
+                style={{
+                  fontSize: '16px',
+                  marginBottom: '10px',
+                  color: '#fbc02d',
+                }}
+              >
+                <b>ROOM HIT</b>
               </h3>
-              <h5>ห้องสมุด</h5>
-              <h5>บลูแพลนเน็ต</h5>
-              <h5>ชายคา</h5>
-              <h5>เฉลิมไทย</h5>
-              <h5>กรีนโซน</h5>
-              <h5>กล้อง</h5>
-              <h5>แก็ดเจ็ด </h5>
-              <h5>ไกลบ้าน</h5>
-              <h5>ถนนนักเขียน</h5>
+              {props.footerNav}
             </div>
             <div className="flex flex-col gap-2 text-start">
-              <h3 style={{ fontSize: '16px', marginBottom: '15px' }}>
-                <b>หมวดหมู่</b>
+              <h3
+                style={{
+                  fontSize: '16px',
+                  marginBottom: '10px',
+                  color: '#fbc02d',
+                }}
+              >
+                <b>TAG HIT</b>
               </h3>
-              <h5>ห้องสมุด</h5>
-              <h5>บลูแพลนเน็ต</h5>
-              <h5>ชายคา</h5>
-              <h5>เฉลิมไทย</h5>
-              <h5>กรีนโซน</h5>
-              <h5>กล้อง</h5>
-              <h5>แก็ดเจ็ด </h5>
-              <h5>ไกลบ้าน</h5>
+              {props.footerNavTag}
+            </div>
+            <div className="flex flex-col gap-2 text-start">
+              <h3
+                style={{
+                  fontSize: '16px',
+                  marginBottom: '10px',
+                  color: '#fbc02d',
+                }}
+              >
+                <b>BLOGGANG</b>
+              </h3>
+              {props.footerNavBlog}
             </div>
           </div>
           <Divider color="black" />
-          <div className="flex flex-row items-center justify-between">
+          <div
+            className="flex flex-row items-center justify-between"
+            style={{ color: 'rgba(233,229,246,.8)' }}
+          >
             <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
             </a>

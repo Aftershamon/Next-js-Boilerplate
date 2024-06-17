@@ -34,12 +34,16 @@ const CardItem = () => {
       {highlights.map((item) => (
         <Link key={item.name} href={item.post_url} passHref>
           <Card
+            className="card"
             sx={{
               maxWidth: 350,
               maxHeight: 350,
               minHeight: 350,
               marginTop: '20px',
               borderRadius: 2,
+              transition: 'filter 0.3s ease',
+              backgroundColor: '#353156',
+              color: '#D6DCE9',
             }}
           >
             <CardMedia

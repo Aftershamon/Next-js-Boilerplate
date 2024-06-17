@@ -5,6 +5,7 @@ import { GiStarFormation } from 'react-icons/gi';
 import { IoMdHome } from 'react-icons/io';
 import { MdExplore, MdFeed } from 'react-icons/md';
 
+import { BlogItem, MenuFooter, TagItem } from '@/components/FooterItem';
 import Home from '@/components/Home';
 import { MenuItem } from '@/components/MenuItem';
 import { BaseTemplate } from '@/templates/BaseTemplate';
@@ -64,6 +65,9 @@ export default function Layout(props: { children: React.ReactNode }) {
         </>
       }
       menuNav={<Home Component={MenuItem} />}
+      footerNav={<Home Component={MenuFooter} />}
+      footerNavBlog={<Home Component={BlogItem} />}
+      footerNavTag={<Home Component={TagItem} />}
     >
       <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
     </BaseTemplate>
