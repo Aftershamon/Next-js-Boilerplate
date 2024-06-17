@@ -15,15 +15,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 }
 
 const Index = () => {
-  return (
-    <>
-      <h5 className="mt-5 text-xl font-bold text-zinc-50">Highlight</h5>
-      <div className="mb-10 grid grid-cols-4 gap-2">
-        <Home />
-      </div>
-      <h5 className="mt-5 text-xl font-bold text-zinc-50">Another Section</h5>
-    </>
-  );
+  return <Home />;
 };
 
 export default Index;

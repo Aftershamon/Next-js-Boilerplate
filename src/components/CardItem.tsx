@@ -36,8 +36,8 @@ const CardItem = () => {
           <Card
             sx={{
               maxWidth: 300,
-              maxHeight: 400,
-              minHeight: 'auto',
+              maxHeight: 350,
+              minHeight: 350,
               marginTop: '20px',
               borderRadius: 2,
             }}
