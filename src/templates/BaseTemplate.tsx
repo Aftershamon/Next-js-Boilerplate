@@ -30,7 +30,7 @@ const BaseTemplate = (props: {
               </h1>
               <div className="hidden rounded-full border border-gray-300 bg-white p-2 px-10 md:hidden lg:flex">
                 <nav>
-                  <ul className="flex flex-wrap justify-around gap-x-10 text-sm">
+                  <ul className="flex flex-wrap justify-around gap-x-5 text-sm">
                     {props.leftNav}
                   </ul>
                 </nav>
