@@ -72,7 +72,7 @@ const BaseTemplate = (props: {
               <h5>Pantip Certified Developer</h5>
             </div>
             <Divider
-              className="my-5 hidden sm:block md:block lg:hidden"
+              className="my-5 sm:block md:block lg:hidden"
               style={{ backgroundColor: 'black' }}
             />
             <div className="flex flex-col gap-2 text-start">
@@ -88,7 +88,7 @@ const BaseTemplate = (props: {
               {props.footerNav}
             </div>
             <Divider
-              className="my-5 hidden sm:block md:block lg:hidden"
+              className="my-5 sm:block md:block lg:hidden"
               style={{ backgroundColor: 'black' }}
             />
             <div className="flex flex-col gap-2 text-start">
@@ -104,7 +104,7 @@ const BaseTemplate = (props: {
               {props.footerNavTag}
             </div>
             <Divider
-              className="my-5 hidden sm:block md:block lg:hidden"
+              className="my-5 sm:block md:block lg:hidden"
               style={{ backgroundColor: 'black' }}
             />
             <div className="flex flex-col gap-2 text-start">
