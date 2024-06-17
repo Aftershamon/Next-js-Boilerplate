@@ -30,29 +30,33 @@ const CardItem = () => {
   }
 
   return (
-    <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+    <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {highlights.map((item) => (
         <Link key={item.name} href={item.post_url} passHref>
           <Card
             className="card"
             sx={{
-              maxWidth: 350,
-              maxHeight: 350,
-              minHeight: 350,
-              marginTop: '20px',
+              maxWidth: '100%',
+              height: 350,
+              mt: 2,
               borderRadius: 2,
               transition: 'filter 0.3s ease',
               backgroundColor: '#353156',
               color: '#D6DCE9',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <CardMedia
               component="img"
               sx={{ height: 250 }}
-              image={item.image_url[0]}
+              image={
+                item.image_url[0] ||
+                'https://upload.wikimedia.org/wikipedia/th/c/c5/Pantip_Logo.png'
+              }
               alt={item.name}
             />
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography gutterBottom component="div" fontSize={14}>
                 {item.name}
               </Typography>

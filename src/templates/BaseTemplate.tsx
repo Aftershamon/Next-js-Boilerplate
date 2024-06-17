@@ -17,7 +17,7 @@ const BaseTemplate = (props: {
     <div className="w-full text-gray-700 antialiased">
       <div className="mx-auto">
         <header className="navbar-background border-b border-black px-4 sm:px-20">
-          <div className="flex flex-col items-center justify-between gap-10 py-5 lg:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 lg:flex-row lg:gap-10 lg:py-5">
             <div className="flex w-full grow flex-row items-center justify-between gap-10 lg:w-auto">
               <h1 className="text-3xl font-bold text-gray-900">
                 <Image
@@ -39,7 +39,7 @@ const BaseTemplate = (props: {
                 <FaUserCircle size={30} />
               </div>
             </div>
-            <div className="mt-5 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
+            <div className="mb-5 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
                   {props.leftNav}

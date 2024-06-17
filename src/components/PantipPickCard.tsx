@@ -33,7 +33,7 @@ const PantipPickCard = () => {
   }
 
   return (
-    <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+    <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {pantipPicks.map((item) => (
         <Link
           key={item.title}
@@ -43,7 +43,7 @@ const PantipPickCard = () => {
           <Card
             className="card"
             sx={{
-              maxWidth: 350,
+              maxWidth: '100%',
               maxHeight: 420,
               minHeight: 420,
               marginTop: '20px',
