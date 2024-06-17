@@ -48,19 +48,16 @@ const BaseTemplate = (props: {
             </div>
           </div>
         </header>
-
         <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-20">
           <ul className="menu-container">{props.menuNav}</ul>
         </header>
-
         <main className="px-20">{props.children}</main>
-
         <footer
-          className="flex flex-col gap-5 px-20 py-8 text-sm"
+          className="flex flex-col gap-5 px-4 py-8 text-sm sm:px-8 md:px-20"
           style={{ fontSize: '14px', backgroundColor: '#353156' }}
         >
           <div
-            className="flex flex-row justify-between gap-10"
+            className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4"
             style={{ color: 'rgba(233,229,246)' }}
           >
             <div className="flex flex-col gap-2 text-start">
@@ -70,10 +67,14 @@ const BaseTemplate = (props: {
               <h5>สิทธิ์การใช้งานของสมาชิก</h5>
               <h5>ติดต่อทีมงาน Pantip</h5>
               <h5>ติดต่อลงโฆษณา</h5>
-              <h5>ร่วมงานกับ Ph5ntip</h5>
+              <h5>ร่วมงานกับ Pantip</h5>
               <h5>Download app Pantip</h5>
               <h5>Pantip Certified Developer</h5>
             </div>
+            <Divider
+              className="my-5 hidden sm:block md:block lg:hidden"
+              style={{ backgroundColor: 'black' }}
+            />
             <div className="flex flex-col gap-2 text-start">
               <h3
                 style={{
@@ -86,6 +87,10 @@ const BaseTemplate = (props: {
               </h3>
               {props.footerNav}
             </div>
+            <Divider
+              className="my-5 hidden sm:block md:block lg:hidden"
+              style={{ backgroundColor: 'black' }}
+            />
             <div className="flex flex-col gap-2 text-start">
               <h3
                 style={{
@@ -98,6 +103,10 @@ const BaseTemplate = (props: {
               </h3>
               {props.footerNavTag}
             </div>
+            <Divider
+              className="my-5 hidden sm:block md:block lg:hidden"
+              style={{ backgroundColor: 'black' }}
+            />
             <div className="flex flex-col gap-2 text-start">
               <h3
                 style={{
@@ -111,15 +120,15 @@ const BaseTemplate = (props: {
               {props.footerNavBlog}
             </div>
           </div>
-          <Divider color="black" />
+          <Divider className="mb-2 mt-5" style={{ backgroundColor: 'black' }} />
           <div
-            className="flex flex-row items-center justify-between"
+            className="flex flex-col items-center justify-between gap-4 sm:flex-row"
             style={{ color: 'rgba(233,229,246,.8)' }}
           >
             <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
             </a>
-            <div>
+            <div className="flex gap-4">
               <a href="/">เงื่อนไข </a>
               <a href="/">แผนผังเว็บไซต์ </a>
               <a href="/">ความเป็นส่วนตัว </a>
