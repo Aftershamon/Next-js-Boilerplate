@@ -1,16 +1,20 @@
 'use client';
 
+import React from 'react';
 import { Provider } from 'react-redux';
 
-import { CardItem } from '@/components/CardItem';
 import { store } from '@/redux/store/store';
 
-const Home = () => {
+interface HomeProps {
+  Component: React.ElementType;
+}
+
+const Home: React.FC<HomeProps> = ({ Component }) => {
   return (
     <Provider store={store}>
-      <CardItem />
+      <Component />
     </Provider>
   );
 };
 
-export { Home };
+export default Home;

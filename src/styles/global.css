@@ -58,3 +58,41 @@ body {
   height: auto;
   display: block;
 }
+
+.menu-container {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+padding-bottom: 20px; 
+scroll-snap-type: x mandatory;
+-webkit-overflow-scrolling: touch;
+}
+
+.menu-container li {
+flex: 0 0 auto;
+margin-right: 10px;
+scroll-snap-align: start; 
+}
+
+.menu-container li:last-child {
+  margin-right: 0;
+}
+
+.menu-container::-webkit-scrollbar {
+  height: 10px; 
+}
+
+.menu-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+  border-radius: 4px; 
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px; 
+}
+
+.menu-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+

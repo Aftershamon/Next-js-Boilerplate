@@ -30,12 +30,12 @@ const CardItem = () => {
   }
 
   return (
-    <div className="mb-10 grid grid-cols-4 gap-2">
+    <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
       {highlights.map((item) => (
         <Link key={item.name} href={item.post_url} passHref>
           <Card
             sx={{
-              maxWidth: 300,
+              maxWidth: 350,
               maxHeight: 350,
               minHeight: 350,
               marginTop: '20px',

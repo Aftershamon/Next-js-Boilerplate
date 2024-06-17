@@ -1,7 +1,6 @@
 import { Divider } from '@mui/material';
 import Image from 'next/image';
 import { FaBars, FaFacebookSquare, FaUserCircle } from 'react-icons/fa';
-import { FaAnglesRight } from 'react-icons/fa6';
 import { TiSocialInstagram } from 'react-icons/ti';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -14,41 +13,41 @@ const BaseTemplate = (props: {
   return (
     <div className="w-full text-gray-700 antialiased">
       <div className="mx-auto">
-        <header className="navbar-background border-b border-black px-20">
-          <div className="flex items-center justify-between py-5">
-            <h1 className="text-3xl font-bold text-gray-900">
-              <Image
-                src="/assets/images/logo-mobile-pantip-white.png"
-                alt="Sentry"
-                width={90}
-                height={90}
-              />
-            </h1>
-            <div className="rounded-full border border-gray-300 bg-white p-2 px-10">
+        <header className="navbar-background border-b border-black px-4 sm:px-20">
+          <div className="flex flex-col items-center justify-between gap-10 py-5 lg:flex-row">
+            <div className="flex w-full grow flex-row items-center justify-between gap-10 lg:w-auto">
+              <h1 className="text-3xl font-bold text-gray-900">
+                <Image
+                  src="/assets/images/logo-mobile-pantip-white.png"
+                  alt="Sentry"
+                  width={90}
+                  height={90}
+                />
+              </h1>
+              <div className="hidden rounded-full border border-gray-300 bg-white p-2 px-10 lg:flex">
+                <nav>
+                  <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
+                    {props.leftNav}
+                  </ul>
+                </nav>
+              </div>
+              <div className="flex flex-row items-center gap-5 rounded-full border border-gray-300 bg-white p-2 px-3">
+                <FaBars size={20} />
+                <FaUserCircle size={30} />
+              </div>
+            </div>
+            <div className="mt-5 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
               <nav>
-                <ul className="flex flex-wrap gap-x-10 text-sm">
+                <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
                   {props.leftNav}
                 </ul>
               </nav>
             </div>
-            <div className="flex flex-row items-center gap-5  rounded-full border border-gray-300 bg-white p-2 px-3">
-              <FaBars size={20} />
-              <FaUserCircle size={30} />
-            </div>
           </div>
         </header>
-        <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-20">
-          <nav>
-            <ul className="flex flex-wrap gap-20 text-xl">{props.menuNav}</ul>
-          </nav>
 
-          <button
-            type="button"
-            className="ml-auto rounded-full bg-white px-4 py-2 font-bold text-gray-700 hover:bg-gray-600"
-            aria-label="Navigate forward"
-          >
-            <FaAnglesRight aria-hidden="true" />
-          </button>
+        <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-20">
+          <ul className="menu-container">{props.menuNav}</ul>
         </header>
 
         <main className="px-20">{props.children}</main>

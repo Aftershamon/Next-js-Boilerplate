@@ -1,25 +1,13 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { AiFillLike } from 'react-icons/ai';
-import { GiSpellBook, GiStarFormation } from 'react-icons/gi';
+import { GiStarFormation } from 'react-icons/gi';
 import { IoMdHome } from 'react-icons/io';
 import { MdExplore, MdFeed } from 'react-icons/md';
 
+import Home from '@/components/Home';
+import { MenuItem } from '@/components/MenuItem';
 import { BaseTemplate } from '@/templates/BaseTemplate';
-
-const menuItems = {
-  book: 'ห้องสมุด',
-  Blue_Plan_Net: 'บลูแพลนเน็ต',
-  Chaika: 'ชายคา',
-  Chaloem_Thai: 'เฉลิมไทย',
-  Griang_Zone: 'กรีนโซน',
-  Camera: 'กล้อง',
-  Gadget: 'แก็ดเจ็ด',
-  Far_from_Home: 'ไกลบ้าน',
-  // Chaloem_Krung: 'เฉลิมกรุง',
-  // Dio_Siam: 'ดิโอลด์สยาม',
-  // Writer_Road: 'ถนนนักเขียน',
-};
 
 export default function Layout(props: { children: React.ReactNode }) {
   const t = useTranslations('RootLayout');
@@ -75,21 +63,7 @@ export default function Layout(props: { children: React.ReactNode }) {
           </li>
         </>
       }
-      menuNav={
-        <>
-          {Object.entries(menuItems).map(([key, value]) => (
-            <li key={key}>
-              <Link
-                href="/"
-                className="flex flex-col items-center gap-2 border-none text-sm text-gray-300 hover:text-white"
-              >
-                <GiSpellBook size={30} />
-                {value}
-              </Link>
-            </li>
-          ))}
-        </>
-      }
+      menuNav={<Home Component={MenuItem} />}
     >
       <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
     </BaseTemplate>
