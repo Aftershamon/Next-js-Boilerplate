@@ -16,7 +16,7 @@ const BaseTemplate = (props: {
   return (
     <div className="w-full text-gray-700 antialiased">
       <div className="mx-auto">
-        <header className="navbar-background border-b border-black px-4 sm:px-20">
+        <header className="navbar-background border-b border-black px-10 sm:px-10 md:px-20 lg:px-20">
           <div className="flex flex-col items-center justify-between gap-4 py-5 lg:flex-row lg:gap-10 lg:py-5">
             <div className="flex w-full grow flex-row items-center justify-between gap-10 lg:w-auto">
               <h1 className="text-3xl font-bold text-gray-900">
@@ -39,7 +39,7 @@ const BaseTemplate = (props: {
                 <FaUserCircle size={30} />
               </div>
             </div>
-            <div className="mb-5 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
+            <div className="mb-5 mt-2 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
                   {props.leftNav}
@@ -48,12 +48,14 @@ const BaseTemplate = (props: {
             </div>
           </div>
         </header>
-        <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-20">
+        <header className="navbar-background flex items-center justify-start border-b border-black p-3 px-10 sm:px-10 md:px-20 lg:px-20">
           <ul className="menu-container">{props.menuNav}</ul>
         </header>
-        <main className="px-20">{props.children}</main>
+        <main className="px-10 sm:px-10 md:px-20 lg:px-20">
+          {props.children}
+        </main>
         <footer
-          className="flex flex-col gap-5 px-4 py-8 text-sm sm:px-8 md:px-20"
+          className="flex flex-col gap-5 px-10 py-8 text-sm sm:px-10 md:px-20 lg:px-20"
           style={{ fontSize: '14px', backgroundColor: '#353156' }}
         >
           <div
