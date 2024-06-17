@@ -22,43 +22,43 @@ export default function Layout(props: { children: React.ReactNode }) {
               href="/"
               className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              <IoMdHome size={30} />
+              <IoMdHome className="text-xl md:text-3xl lg:text-3xl" />
               {t('home_link')}
             </Link>
           </li>
           <li>
             <Link
-              href="/about/"
+              href="https://pantip.com/home/feed"
               className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              <MdFeed size={30} />
+              <MdFeed className="text-xl md:text-3xl lg:text-3xl" />
               {t('about_link')}
             </Link>
           </li>
           <li>
             <Link
-              href="/guestbook/"
+              href="https://pantip.com/home/pick"
               className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              <AiFillLike size={30} />
+              <AiFillLike className="text-xl md:text-3xl lg:text-3xl" />
               {t('guestbook_link')}
             </Link>
           </li>
           <li>
             <Link
-              href="/portfolio/"
+              href="https://pantip.com/home/hitz"
               className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              <GiStarFormation size={30} />
+              <GiStarFormation className="text-xl md:text-3xl lg:text-3xl" />
               {t('portfolio_link')}
             </Link>
           </li>
           <li>
             <Link
-              href="/portfolio/"
+              href="https://pantip.com/home/communities"
               className="flex items-center gap-2 border-none text-gray-700 hover:text-gray-900"
             >
-              <MdExplore size={30} />
+              <MdExplore className="text-xl md:text-3xl lg:text-3xl" />
               {t('explore')}
             </Link>
           </li>

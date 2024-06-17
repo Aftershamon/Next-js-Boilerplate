@@ -1,6 +1,7 @@
 import { Divider } from '@mui/material';
 import Image from 'next/image';
 import { FaBars, FaFacebookSquare, FaUserCircle } from 'react-icons/fa';
+import { FaCommentMedical } from 'react-icons/fa6';
 import { TiSocialInstagram } from 'react-icons/ti';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -27,21 +28,40 @@ const BaseTemplate = (props: {
                   height={90}
                 />
               </h1>
-              <div className="hidden rounded-full border border-gray-300 bg-white p-2 px-10 lg:flex">
+              <div className="hidden rounded-full border border-gray-300 bg-white p-2 px-10 md:hidden lg:flex">
                 <nav>
-                  <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
+                  <ul className="flex flex-wrap justify-around gap-x-10 text-sm">
                     {props.leftNav}
                   </ul>
                 </nav>
               </div>
-              <div className="flex flex-row items-center gap-5 rounded-full border border-gray-300 bg-white p-2 px-3">
-                <FaBars size={20} />
-                <FaUserCircle size={30} />
+              <div className="flex flex-row items-center gap-2 bg-transparent md:gap-3 lg:gap-3">
+                <div className="flex flex-row items-center rounded-full border border-gray-300 bg-white p-2 md:px-3 lg:px-3">
+                  <a
+                    aria-label="addcomment"
+                    href="https://pantip.com/login?redirect=Zm9ydW0vbmV3X3RvcGlj&pos=2"
+                  >
+                    <span aria-hidden="true">
+                      <FaCommentMedical className="text-xl md:text-3xl lg:text-3xl" />
+                    </span>
+                  </a>
+                </div>
+                <div className="flex flex-row items-center gap-2 rounded-full border border-gray-300 bg-white p-2 md:gap-5 md:px-3 lg:gap-5 lg:px-3 ">
+                  <FaBars size={20} />
+                  <a
+                    aria-label="login"
+                    href="https://pantip.com/login?redirect=aHR0cHM6Ly9wYW50aXAuY29tL2hvbWUvY29tbXVuaXRpZXM="
+                  >
+                    <span aria-hidden="true">
+                      <FaUserCircle className="text-xl md:text-3xl lg:text-3xl" />
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="mb-5 mt-2 flex w-full rounded-full border border-gray-300 bg-white p-2 px-10 lg:mt-0 lg:hidden lg:w-auto">
+            <div className="mb-5 mt-2 flex w-full justify-center rounded-full border border-gray-300 bg-white p-2 px-5 lg:mt-0 lg:hidden lg:w-auto">
               <nav>
-                <ul className="flex flex-wrap justify-center gap-x-10 text-sm">
+                <ul className="flex flex-wrap justify-center gap-5 text-sm">
                   {props.leftNav}
                 </ul>
               </nav>
@@ -63,15 +83,60 @@ const BaseTemplate = (props: {
             style={{ color: 'rgba(233,229,246)' }}
           >
             <div className="flex flex-col gap-2 text-start">
-              <h5>กฎ กติกาและมารยาท</h5>
-              <h5>คำแนะนำการโพสต์</h5>
-              <h5>นโยบายเกี่ยวกับข้อมูลส่วนบุคคล</h5>
-              <h5>สิทธิ์การใช้งานของสมาชิก</h5>
-              <h5>ติดต่อทีมงาน Pantip</h5>
-              <h5>ติดต่อลงโฆษณา</h5>
-              <h5>ร่วมงานกับ Pantip</h5>
-              <h5>Download app Pantip</h5>
-              <h5>Pantip Certified Developer</h5>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/tos"
+              >
+                กฎ กติกาและมารยาท
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/defamation"
+              >
+                คำแนะนำการโพสต์
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/privacy"
+              >
+                นโยบายเกี่ยวกับข้อมูลส่วนบุคคล
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/privilege"
+              >
+                สิทธิ์การใช้งานของสมาชิก
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/contact"
+              >
+                ติดต่อทีมงาน Pantip
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/advertising"
+              >
+                ติดต่อลงโฆษณา
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/job"
+              >
+                ร่วมงานกับ Pantip
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/app"
+              >
+                Download app Pantip
+              </a>
+              <a
+                className="hover:text-white hover:underline"
+                href="https://pantip.com/about/certified_developer"
+              >
+                Pantip Certified Developer
+              </a>
             </div>
             <Divider
               className="my-5 sm:block md:block lg:hidden"
@@ -130,11 +195,6 @@ const BaseTemplate = (props: {
             <a href="/">
               © Copyright {new Date().getFullYear()} {AppConfig.name}.
             </a>
-            <div className="flex gap-4">
-              <a href="/">เงื่อนไข </a>
-              <a href="/">แผนผังเว็บไซต์ </a>
-              <a href="/">ความเป็นส่วนตัว </a>
-            </div>
             <div className="flex items-center gap-2">
               <a href="/" aria-label="Facebook">
                 <span aria-hidden="true">
